@@ -1,0 +1,14 @@
+{
+  "name": "chessboard",
+  "version": "0.0.0",
+  "description": "chess game",
+  "main": "main.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -7,8 +7,18 @@
     "doc": "doc"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "sass": "node-sass --output css/ scss/main.scss",
+    "start":"browser-sync start --server --directory"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+
+  "devDependencies": {
+    "browser-sync": "^2.9.6",
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3",
+    "node-sass": "^3.3.3"
+  }
+
 }

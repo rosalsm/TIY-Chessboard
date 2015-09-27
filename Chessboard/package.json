@@ -1,15 +1,12 @@
 {
   "name": "chessboard",
   "version": "0.0.0",
-  "description": "chess game",
-  "main": "main.js",
-  "directories": {
-    "doc": "doc"
-  },
-  "scripts": {
-    "test": "mocha",
-    "sass": "node-sass --output css/ scss/main.scss",
-    "start":"browser-sync start --server --directory"
+  "description": "chessboard",
+  "main": "index.html",
+ "scripts": {
+   "test": "mocha js/tests.js",
+   "start": "browser-sync start --server --directory --startPath='index.html' --files='index.html,js/*.js,css/*.css'",
+   "sass": "node-sass --output css/ scss/main.scss"
   },
   "author": "",
   "license": "ISC",
@@ -20,5 +17,4 @@
     "mocha": "^2.3.3",
     "node-sass": "^3.3.3"
   }
-
 }

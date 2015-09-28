@@ -12,9 +12,9 @@
    * When the event happens the callback should listen to the event in the trigger element (button)
    * and move the piece to the next position.
     *
-    * event=click
-    *selector=button
-    *callback=function
+    * event = click
+    *selector = button
+    *callback = function
     *
    */
 
@@ -75,4 +75,4 @@ jQuery('i.fa fa-play').on('click', nextMove);
   });
 
 // Am I supposed to recognize this?
-})(window || module && module.exports || this)
+//})(window || module && module.exports || this)

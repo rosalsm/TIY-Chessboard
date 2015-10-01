@@ -4,9 +4,10 @@
   "description": "chessboard",
   "main": "index.html",
  "scripts": {
-   "test": "mocha js/tests.js",
-   "start": "browser-sync start --server --directory --startPath='index.html' --files='index.html,js/*.js,css/*.css'",
-   "sass": "node-sass --output css/ scss/main.scss"
+   "test": "browser-sync start --server --startPath='tests.html' --files='js/*.js'",
+   "start": "browser-sync start --server --startPath='index.html' --files='index.html,js/*.js,css/*.css'",
+   "sass": "node-sass --output css/ scss/main.scss",
+   "sass:watch": "npm run sass -- --watch"
   },
   "author": "",
   "license": "ISC",

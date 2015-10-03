@@ -1,7 +1,16 @@
+body{
+  width: 100%;
 
+}
+
+#container{
+  width: 50%;
+  margin: 0 auto;
+}
 
 table {
   border: 2px;
+
 }
 
 tr.first-last-row {
@@ -42,10 +51,8 @@ td.col-b {
   background-color: red;
 }
 
-tr.button-row{
-  height: 50px;
-  width: 50px;
-}
-tr.button-row >td{
-  text-align: center;
+nav.button-row{
+  width:50%;
+  margin: 0 auto;
+
 }

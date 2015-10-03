@@ -14,14 +14,15 @@
         <link rel="stylesheet" href="css/main.css">
         <!-- test will go after main.css  -->
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="js/controllers.js"></script>
 
     </head>
 
     <body>
 
-      <table>
+      <section id="container">
 
+      <table class="chessboard">
+        <thead>
         <tr class="first-last-row">
           <td></td>
           <td>A</td>
@@ -34,9 +35,10 @@
           <td>H</td>
           <td></td>
         </tr>
-
+      </thead>
+        <tbody>
         <tr class="rest-rows">
-          <td class="first-last-col">8</td>
+          <th class="first-last-col">8</th>
           <td class="col-w">&#9820;</td>
           <td class="col-b">&#9822;</td>
           <td class="col-w">&#9821;</td>
@@ -45,11 +47,11 @@
           <td class="col-b">&#9821;</td>
           <td class="col-w">&#9822;</td>
           <td class="col-b">&#9820;</td>
-          <td class="first-last-col">8</td>
+          <th class="first-last-col">8</th>
         </tr>
 
         <tr class="rest-rows">
-          <td class="first-last-col">7</td>
+          <th class="first-last-col">7</th>
           <td class="col-b">&#9823;</td>
           <td class="col-w">&#9823;</td>
           <td class="col-b">&#9823;</td>
@@ -58,11 +60,11 @@
           <td class="col-w">&#9823;</td>
           <td class="col-b">&#9823;</td>
           <td class="col-w">&#9823;</td>
-          <td class="first-last-col">7</td>
+          <th class="first-last-col">7</th>
         </tr>
 
         <tr class="rest-rows">
-          <td class="first-last-col">6</td>
+          <th class="first-last-col">6</th>
           <td class="col-w"></td>
           <td class="col-b"></td>
           <td class="col-w"></td>
@@ -71,11 +73,11 @@
           <td class="col-b"></td>
           <td class="col-w"></td>
           <td class="col-b"></td>
-          <td class="first-last-col">6</td>
+          <th class="first-last-col">6</th>
         </tr>
 
         <tr class="rest-rows">
-          <td class="first-last-col">5</td>
+          <th class="first-last-col">5</th>
           <td class="col-b"></td>
           <td class="col-w"></td>
           <td class="col-b"></td>
@@ -84,11 +86,11 @@
           <td class="col-w"></td>
           <td class="col-b"></td>
           <td class="col-w"></td>
-          <td class="first-last-col">5</td>
+          <th class="first-last-col">5</th>
         </tr>
 
         <tr class="rest-rows">
-          <td class="first-last-col">4</td>
+          <th class="first-last-col">4</th>
           <td class="col-w"></td>
           <td class="col-b"></td>
           <td class="col-w"></td>
@@ -97,11 +99,11 @@
           <td class="col-b"></td>
           <td class="col-w"></td>
           <td class="col-b"></td>
-          <td class="first-last-col">4</td>
+          <th class="first-last-col">4</th>
         </tr>
 
         <tr class="rest-rows">
-          <td class="first-last-col">3</td>
+          <th class="first-last-col">3</th>
           <td class="col-b"></td>
           <td class="col-w"></td>
           <td class="col-b"></td>
@@ -110,11 +112,11 @@
           <td class="col-w"></td>
           <td class="col-b"></td>
           <td class="col-w"></td>
-          <td class="first-last-col">3</td>
+          <th class="first-last-col">3</th>
         </tr>
 
         <tr class="rest-rows">
-          <td class="first-last-col">2</td>
+          <th class="first-last-col">2</th>
           <td class="col-w">&#9817;</td>
           <td class="col-b">&#9817;</td>
           <td class="col-w">&#9817;</td>
@@ -123,11 +125,11 @@
           <td class="col-b">&#9817;</td>
           <td class="col-w">&#9817;</td>
           <td class="col-b">&#9817;</td>
-          <td class="first-last-col">2</td>
+          <th class="first-last-col">2</th>
         </tr>
 
         <tr class="rest-rows">
-          <td class="first-last-col">1</td>
+          <th class="first-last-col">1</th>
           <td class="col-b">&#9814;</td>
           <td class="col-w">&#9816;</td>
           <td class="col-b">&#9815;</td>
@@ -136,9 +138,10 @@
           <td class="col-w">&#9815;</td>
           <td class="col-b">&#9816;</td>
           <td class="col-w">&#9814;</td>
-          <td class="first-last-col">1</td>
+          <th class="first-last-col">1</th>
         </tr>
-
+      </tbody>
+      <tfoot>
         <tr class="first-last-row">
           <td></td>
           <td>A</td>
@@ -151,35 +154,37 @@
           <td>H</td>
           <td></td>
         </tr>
+      </tfoot>
+    </table>
 
-          <tr class="button-row">
-            <td></td>
-            <td></td>
-            <td><i class="fa fa-backward"></i></td>
-            <td><i class="fa fa-step-backward"></i></td>
-            <td><i class="fa fa-play"></i></td>
-            <td><i class="fa fa-step-forward"></i></td>
-            <td><i class="fa fa-fast-forward"></i></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+          <nav class="button-row">
 
+            <button><i class="fa fa-backward"></i></button>
+            <button><i class="fa fa-step-backward"></i></button>
+            <button><i class="fa fa-play"></i></button>
+            <button><i class="fa fa-step-forward"></i></button>
+            <button><i class="fa fa-fast-forward"></i></button>
+
+          </nav>
 
 
-
+    </section>
 
 
 
 
 
 
-      </table>
+
+
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/view-helpers.js"></script>
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

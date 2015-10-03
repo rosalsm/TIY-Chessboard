@@ -78,9 +78,9 @@
      * @todo Make this work!
      */
     prev: function(){
-      if(current > 0){
+      if(current >= 0){
         current-=1;
-        game.applyMove(current);
+        game.applyMove(current); //current-1???????
       }
       return this;
     },

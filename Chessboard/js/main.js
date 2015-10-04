@@ -42,8 +42,7 @@
    * @return {Array} of {Array} of {String|null}
    */
   var game = (globals.game = {
-
-    board: function(){                         //copy of the boar that is not connected
+    board: function(){
       return board.map(function(row){
         return row.slice();
       });
@@ -66,11 +65,23 @@
     next: function(){//code for the next moves
       console.log("i am in main.js");
        if (current < moves.length){
-          game.applyMove(current);
+          //game.applyMove(current);
+          game.applyMove(moves[current].from,moves[current].to);
           current+=1;
         }
+        //console.log(game.tracer());
       return this;
     },
+
+    play: function(){
+      for (current=0; current < moves.length; current++){
+    game.applyMove(moves[current].from, moves[current].to);
+    console.log(game.tracer());
+    }
+      return this;
+    },
+
+
     /**
      * Advance the internal game board to the previous move.
      *
@@ -80,8 +91,11 @@
     prev: function(){
       if(current >= 0){
         current-=1;
-        game.applyMove(current); //current-1???????
+        //game.applyMove(current); //current-1???????
+        game.applyMove(moves[current].to,moves[current].from);
+        // game.applyMove(from,to);
       }
+      console.log(game.tracer());
       return this;
     },
     /**
@@ -91,7 +105,10 @@
      * @todo Make this work!
      */
     end: function(){
-      // Write some code here...
+      for (current=0; current < moves.length; current++){
+    game.applyMove(moves[current].from, moves[current].to);
+    }
+    //console.log(game.tracer());
       return this;
     },
     /**
@@ -127,9 +144,12 @@
       //moves[current].from = moves[current].to;
       //moves[current].to = null;      for going backwards.
 
-      board[moves[current].to.rank][moves[current].to.file] = board[moves[current].from.rank][moves[current].from.file];
-      board[moves[current].from.rank][moves[current].from.file] = null;
-      console.log(game.tracer())
+      //  board[moves[current].to.rank][moves[current].to.file] = board[moves[current].from.rank][moves[current].from.file];
+      //  board[moves[current].from.rank][moves[current].from.file] = null;
+      board[to.rank][to.file] = board[from.rank][from.file];
+      board[from.rank][from.file] = null;
+
+      //console.log(game.tracer())
     } // END applyMove
   }); // END game
   /**

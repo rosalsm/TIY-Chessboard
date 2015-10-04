@@ -40,10 +40,11 @@ console.log("probando helpers");
       // testing if we are getting what we want
 
       if (piece) {
-       //console.log($square.text());
+       $square.text();
        //console.log($square[0].className);
        //console.log($square.text());
-     }
+     };
+
       // Not _exactly_ what we discussed in class...
         // TODO: Convert `square` to class name(s)
         // TODO: Add class name(s) to `td` instead

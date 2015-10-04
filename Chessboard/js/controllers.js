@@ -42,7 +42,9 @@ jQuery('.fa-play').on('click', function(event){
     console.log('i am in controllers forward');
     game.next();
     console.log(game.tracer());
-    });
+      
+  });
+
     // TODO: Fire tracer bullet!
     // TODO: Tell the Model -- `game` -- to advance to the next move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`

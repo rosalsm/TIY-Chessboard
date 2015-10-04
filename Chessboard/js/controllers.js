@@ -22,6 +22,7 @@ console.log("probando controllers");
 jQuery('.fa-play').on('click', function(event){
   console.log("i am in controllers play");
    game.play();
+   view.helper();
   });
 
   //  board [tr][td]=board[tr][td] next move?????
@@ -41,8 +42,9 @@ jQuery('.fa-play').on('click', function(event){
   jQuery(".fa-step-forward").on('click', function(event){
     console.log('i am in controllers forward');
     game.next();
+    view.helper();
     console.log(game.tracer());
-      
+
   });
 
     // TODO: Fire tracer bullet!
@@ -53,6 +55,7 @@ jQuery('.fa-play').on('click', function(event){
   // Controller for "previous move"...This will be step-backward
   jQuery(".fa-step-backward").on('click', function(event){
     game.prev();
+    view.helper();
     console.log("i am in controllers and prev")
     console.log(game.tracer());
   });
@@ -70,6 +73,7 @@ jQuery('.fa-play').on('click', function(event){
   // Controller for "fast-forward"...
   jQuery(".fa-fast-forward").on('click', function(event){
     game.end();
+    view.helper();
     console.log("i am in controllers and end")
     console.log(game.tracer());
     });
@@ -81,6 +85,7 @@ jQuery('.fa-play').on('click', function(event){
   // Controller for anything else...
    jQuery(".fa-backward").on('click', function(event){
      game.reset();
+     view.helper();
      console.log(game.tracer());
     // TODO: Fire tracer bullet!
     // TODO: Tell the Model -- `game` -- to do something it knows how to do...

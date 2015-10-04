@@ -2,6 +2,10 @@
 ;(function(globals){ // That damn IIFE again!
 // Your code BELOW here...
 console.log("probando helpers");
+
+var view = (globals.view = {
+
+  helper: function(){
   // Because the game board only corresponds to the `tbody` element...
   var $chessboard = jQuery('.chessboard tbody'); //getting values in a jQuery collection from DOM elements(view)
   // the view HTML representation of the chessboard
@@ -40,16 +44,19 @@ console.log("probando helpers");
       // testing if we are getting what we want
 
       if (piece) {
-       $square.text();
+       $square.text(piece);
+     } else {
+       $square.text(" ");
+     };
        //console.log($square[0].className);
        //console.log($square.text());
-     };
+     });
 
       // Not _exactly_ what we discussed in class...
         // TODO: Convert `square` to class name(s)
         // TODO: Add class name(s) to `td` instead
     });
-  });
-
+  }
+});
 // Don't go breaking my IIFE...
 })(window || module && module.exports || this);

@@ -139,6 +139,9 @@
      * @todo Fill me in! ...and remove this comment.
      */
     applyMove: function(from, to){
+      board[to.rank][to.file] = board[from.rank][from.file];
+      board[from.rank][from.file] = null;
+    } // END applyMove
       // moves[current].to = moves[current].from;
       // moves[current].from = null;   for going forward.
       //moves[current].from = moves[current].to;
@@ -146,11 +149,10 @@
 
       //  board[moves[current].to.rank][moves[current].to.file] = board[moves[current].from.rank][moves[current].from.file];
       //  board[moves[current].from.rank][moves[current].from.file] = null;
-      board[to.rank][to.file] = board[from.rank][from.file];
-      board[from.rank][from.file] = null;
+
 
       //console.log(game.tracer())
-    } // END applyMove
+
   }); // END game
   /**
    * Provide the initial state of the game board, useful for any game.

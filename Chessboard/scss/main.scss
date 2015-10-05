@@ -1,6 +1,5 @@
 body{
   width: 100%;
-
 }
 
 #container{
@@ -17,6 +16,20 @@ td{
   width: 10%;
   padding-bottom: 10%;
 }
+
+td.col-w {
+  background-color: yellow;
+}
+
+td.col-b {
+  background-color: red;
+}
+
+nav.button-row{
+  width:50%;
+  margin: 0 auto;
+}
+
 
 
 // tr.first-last-row {
@@ -48,17 +61,3 @@ td{
 //   text-align: center;
 //   font-size: 25px;
 // }
-
-td.col-w {
-  background-color: yellow;
-}
-
-td.col-b {
-  background-color: red;
-}
-
-nav.button-row{
-  width:50%;
-  margin: 0 auto;
-
-}

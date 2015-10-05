@@ -23,7 +23,7 @@ jQuery('.fa-play').on('click', function(event){
   console.log("i am in controllers play");
    game.play();
    view.helper();
-  });
+ });//end button play on (click)
 
   //  board [tr][td]=board[tr][td] next move?????
    //after we have the next move, we can change the piece from the starting point

@@ -1,13 +1,20 @@
 // TODO: Should probably live in `js/view-helpers.js` one day...
 ;(function(globals){ // That damn IIFE again!
-// Your code BELOW here...
+
 console.log("probando helpers");
+
+var view = (globals.view = {
+//as we did with the model in main.js if we declare a var view and create another IIFE globals.view we can
+// use this view.helper function in controllers in order to move the pieces. However in my case is only moving
+// letters. I think because it is moving a representation of the model in the view now that they are connected
+// by the view.helper and game.board line20.
+  helper: function(){
+  var $chessboard = jQuery('.chessboard tbody');
+  //getting values in a jQuery collection from DOM elements(view)
   // Because the game board only corresponds to the `tbody` element...
-  var $chessboard = jQuery('.chessboard tbody'); //getting values in a jQuery collection from DOM elements(view)
   // the view HTML representation of the chessboard
   // I always start variable names with `$` when they reference `jQuery.Collection` values
 
-  // This looks strangely familiar... is that COPY-PASTA!?
   // TODO: this is the representation of the chessboard in the model as arrays of arrays (main.js)
 
   var gameboard = game.board();
@@ -27,7 +34,7 @@ console.log("probando helpers");
   //piece could exits or not depending if we have nothing or a piece.
   jQuery(gameboard).each(function(rank, row){ // iterates on the gameboard each rank (index) in the row
     jQuery(row).each(function(file, piece){  // in every row iterates each file(index) if there is a piece??
-//I think here is trying to get the oocation of the pieces (map of the pieces/??????)
+//I think here is trying to get the location of the pieces (map of the pieces/??????)
 
       //we are putting all of them
       // http://stackoverflow.com/questions/1442925/how-to-get-nth-jquery-element
@@ -40,15 +47,20 @@ console.log("probando helpers");
       // testing if we are getting what we want
 
       if (piece) {
-       //console.log($square.text());
+       $square.text(piece);
+     } else {
+       $square.text(" ");
+     };
+     // changing the move of the pieces and leaving and empty td when the piece is moving
        //console.log($square[0].className);
        //console.log($square.text());
-     }
+     });
+
       // Not _exactly_ what we discussed in class...
         // TODO: Convert `square` to class name(s)
         // TODO: Add class name(s) to `td` instead
     });
-  });
-
+  }
+});
 // Don't go breaking my IIFE...
 })(window || module && module.exports || this);

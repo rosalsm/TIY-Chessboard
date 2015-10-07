@@ -20,9 +20,10 @@
 console.log("probando controllers");
 
 jQuery('.fa-play').on('click', function(event){
-  console.log("i am in controllers.js");
-   game.next();
-  });
+  console.log("i am in controllers play");
+   game.play();
+   view.helper();
+ });//end button play on (click)
 
   //  board [tr][td]=board[tr][td] next move?????
    //after we have the next move, we can change the piece from the starting point
@@ -38,15 +39,23 @@ jQuery('.fa-play').on('click', function(event){
 
 
   // Controller for "next move"... This will be play
-  //jQuery(/* your "next move" button */).on('click', function(event){
+  jQuery(".fa-step-forward").on('click', function(event){
+    console.log('i am in controllers forward');
+    game.next();
+    view.helper();
+    console.log(game.tracer());
+
+  });
+
     // TODO: Fire tracer bullet!
     // TODO: Tell the Model -- `game` -- to advance to the next move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
-  //});//the one that I explain above
+
 
   // Controller for "previous move"...This will be step-backward
   jQuery(".fa-step-backward").on('click', function(event){
     game.prev();
+    view.helper();
     console.log("i am in controllers and prev")
     console.log(game.tracer());
   });
@@ -62,18 +71,26 @@ jQuery('.fa-play').on('click', function(event){
   // }
 
   // Controller for "fast-forward"...
-  // jQuery(/* your "fast-forward" button */).on(/* wat? */, function(event){
+  jQuery(".fa-fast-forward").on('click', function(event){
+    game.end();
+    view.helper();
+    console.log("i am in controllers and end")
+    console.log(game.tracer());
+    });
     // TODO: Fire tracer bullet!
     // TODO: Tell the Model -- `game` -- to advance to the last move...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
-  //});
+
 
   // Controller for anything else...
-  // jQuery(/* any other buttons out there? */).on(/* dunno */, function(event){
+   jQuery(".fa-backward").on('click', function(event){
+     game.reset();
+     view.helper();
+     console.log(game.tracer());
     // TODO: Fire tracer bullet!
     // TODO: Tell the Model -- `game` -- to do something it knows how to do...
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
-  //});
+    });
 
 // Am I supposed to recognize this?
 })(window || module && module.exports || this)

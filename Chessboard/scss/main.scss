@@ -1,6 +1,5 @@
 body{
   width: 100%;
-
 }
 
 #container{
@@ -10,38 +9,16 @@ body{
 
 table {
   border: 2px;
-
+  width: 100%;
 }
 
-tr.first-last-row {
-  height: 10px;
-  width: 50px;
-  background-color: white;
-  text-align: center;
+td{
+  width: 10%;
+  padding-bottom: 10%;
 }
-
-tr.first-last-row > td{
-  text-align: center;
-}
-
-tr.rest-rows{
-  height: 50px;
-  width: 50px;
-}
-
-
-tr > td.first-last-col{
-  width: 50px;
-  background-color: white;
-  text-align: center;
-}
-
-tr.rest-rows > td{
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  font-size: 25px;
-}
+//.rest-rows1 td:nth-child(1,3,5,7){
+//background-color:yellow
+//}
 
 td.col-w {
   background-color: yellow;
@@ -54,5 +31,39 @@ td.col-b {
 nav.button-row{
   width:50%;
   margin: 0 auto;
-
 }
+
+
+
+
+
+// i don't need that any more
+// tr.first-last-row {
+//   height: 10px;
+//   width: 50px;
+//   background-color: white;
+//   text-align: center;
+// }
+//
+// tr.first-last-row > td{
+//   text-align: center;
+// }
+//
+// tr.rest-rows{
+//   height: 50px;
+//   width: 50px;
+// }
+//
+//
+// tr > td.first-last-col{
+//   width: 50px;
+//   background-color: white;
+//   text-align: center;
+// }
+//
+// tr.rest-rows > td{
+//   width: 50px;
+//   height: 50px;
+//   text-align: center;
+//   font-size: 25px;
+// }

@@ -3,12 +3,12 @@
 
 console.log("probando helpers");
 
-var view = (globals.view = {
+//var view = (globals.view = {
 //as we did with the model in main.js if we declare a var view and create another IIFE globals.view we can
 // use this view.helper function in controllers in order to move the pieces. However in my case is only moving
 // letters. I think because it is moving a representation of the model in the view now that they are connected
 // by the view.helper and game.board line20.
-  helper: function(){
+  //helper: function(){
   var $chessboard = jQuery('.chessboard tbody');
   //getting values in a jQuery collection from DOM elements(view)
   // Because the game board only corresponds to the `tbody` element...
@@ -46,21 +46,57 @@ var view = (globals.view = {
       //console.log($square.get(), rank, file, piece);
       // testing if we are getting what we want
 
-      if (piece) {
-       $square.text(piece);
-     } else {
-       $square.text(" ");
-     };
+      // if(piece){$square.text(piece)};
+      //else{$square.text(" ")};
+
+      //SHOWING INN THE VIEW WHAT THE SITUATION OF THE PIECES IS IN THE GAME.
+      if (piece === 'R') {
+       $square.addClass('bRook');
+       }
+      if (piece === 'N'){
+       $square.addClass('bKnight');
+       }
+      if (piece === 'B'){
+        $square.addClass('bBishop');
+      }
+      if (piece === 'Q'){
+        $square.addClass('bQueen');
+      }
+      if (piece === 'K'){
+        $square.addClass('bKing');
+      }
+      if (piece === 'P'){
+        $square.addClass('bPawn');
+      }
+      if (piece === 'p'){
+        $square.addClass('wPawn');
+      }
+      if (piece === 'r'){
+        $square.addClass('wRook');
+      }
+      if (piece === 'n'){
+        $square.addClass('wKnight');
+      }
+      if (piece === 'q'){
+        $square.addClass('wQueen');
+      }
+      if (piece === 'k'){
+        $square.addClass('wKing');
+      }
+      if (piece === 'b'){
+        $square.addClass('wBishop');
+      }
+
+
      // changing the move of the pieces and leaving and empty td when the piece is moving
        //console.log($square[0].className);
        //console.log($square.text());
-     });
+
 
       // Not _exactly_ what we discussed in class...
         // TODO: Convert `square` to class name(s)
         // TODO: Add class name(s) to `td` instead
-    });
-  }
-});
+    });//END EACH FILE
+  });//END EACH ROW
 // Don't go breaking my IIFE...
 })(window || module && module.exports || this);

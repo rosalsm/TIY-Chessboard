@@ -4,22 +4,38 @@ body {
   font-family: Lato; }
 
 #container {
-  width: 50%;
+  width: 100%;
   margin: 0 auto; }
 
 h1 {
   font-size: 2em;
-  margin-left: 12%;
+  margin-left: 20%;
   font-family: Lato;
   font-weight: 300; }
 
+.info {
+  width: 40%;
+  display: inline-block;
+  margin-left: 8%;
+  margin-top: 7.5em; }
+
+.table-nav {
+  width: 45%;
+  float: right;
+  display: inline-block;
+  align-items: center;
+  margin-top: 2em;
+  margin-right: 4%; }
+
 table {
   border: 2px;
-  width: 100%; }
+  width: 90%;
+  display: inline-block;
+  float: right; }
 
 td {
-  width: 10%;
-  height: 70px;
+  width: 10.5%;
+  height: 40px;
   font-size: 2em;
   position: relative; }
 
@@ -32,9 +48,12 @@ td.col-b {
 th {
   font-size: 2em; }
 
-nav.button-row {
-  width: 70%;
-  margin-left: 22%; }
+.button-row {
+  margin-left: 15%;
+  margin-bottom: 30px; }
+  .button-row button {
+    background-color: #e5e5ff;
+    border-radius: 5px; }
 
 .bRook::before {
   content: "\265C";
@@ -85,12 +104,14 @@ nav.button-row {
  *    `:before` to contain the top-margins of child elements.
  */
 .clearfix:before,
-td:before,
-.clearfix:after, td:after {
+#container:before,
+.info:before,
+.table-nav:before,
+.clearfix:after, #container:after, .info:after, .table-nav:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, td:after {
+.clearfix:after, #container:after, .info:after, .table-nav:after {
   clear: both; }

@@ -1,26 +1,17 @@
 
  (function(globals){ // IIFE: Immediately Invoked Function Expression
 
-  /**
-   * Internal representation of the game board in its current state.
-   *
-   * @see game.board
-   * @see game.tracer
-   * @see initial
-   * @var {Array} of {Array} of {String|null}
-   */
+
+   //Internal representation of the game board in its current state.
+
 
   var board = initial(); // initialize the `board` this is the initial board.
 //this is different that game.board (function)
-  /**
-   * List of moves for the "Catalan Opening: Closed Variation" suitable for use
-   * as arguments to `applyMove` below.
-   *
-   * @see applyMove
-   * @var {Array} of...?
-   */
 
-//      var moves = { from:{rank:number, file:number}, to:{rank:number, file:number}};
+   //List of moves for the "Catalan Opening: Closed Variation" suitable for use
+   //as arguments to `applyMove` below.
+
+//var moves = { from:{rank:number, file:number}, to:{rank:number, file:number}};
   var moves = [   {from:{rank:6, file:3}, to:{rank:4, file:3}},
                   {from:{rank:0, file:6}, to:{rank:2, file:5}},
                   {from:{rank:6, file:2}, to:{rank:4, file:2}},
@@ -34,9 +25,6 @@
  var current= 0;
 //initialize the count of the moves in moves
 
-
-
-  // You don't need to understand `globals` yet...
   /**
    * Provide a _copy_ of the game board in order to update the View from it
    * @return {Array} of {Array} of {String|null}
@@ -47,21 +35,16 @@
         return row.slice();
       });
     },
-    /**
-     * Reset the internal game board to it's initial state.
-     *
-     * @return {Object} the game object for Method Chaining
-     */
+
+     //Reset the internal game board to it's initial state. (game.reset)
+
     reset: function(){
       board = initial();
       return this;  //this refers that reset belongs to function game so it returns game
     },
-    /**
-     * Advance the internal game board to the next move.
-     *
-     * @return {Object} the game object for Method Chaining
-     * @todo Make this work!
-     */
+
+     //Advance the internal game board to the next move. (game.next)
+
     next: function(){//code for the next moves
       console.log("i am in main.js");
        if (current < moves.length){
@@ -73,6 +56,8 @@
       return this;
     },
 
+    //Advance the internal game board to all the moves (game.play)
+
     play: function(){
       for (current=0; current < moves.length; current++){
     game.applyMove(moves[current].from, moves[current].to);
@@ -82,28 +67,21 @@
     },
 
 
-    /**
-     * Advance the internal game board to the previous move.
-     *
-     * @return {Object} the game object for Method Chaining
-     * @todo Make this work!
-     */
+
+   //Advance the internal game board to the previous move. (game.prev)
+
     prev: function(){
       if(current >= 0){
         current-=1;
-        //game.applyMove(current); //current-1???????
         game.applyMove(moves[current].to,moves[current].from);
         // game.applyMove(from,to);
       }
       console.log(game.tracer());
       return this;
     },
-    /**
-     * Advance the internal game board to the last move.
-     *
-     * @return {Object} the game object for Method Chaining
-     * @todo Make this work!
-     */
+
+    //Advance the internal game board to the last move. (game.end)
+
     end: function(){
       for (current=0; current < moves.length; current++){
     game.applyMove(moves[current].from, moves[current].to);

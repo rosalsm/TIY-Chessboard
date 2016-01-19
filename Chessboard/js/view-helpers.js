@@ -49,7 +49,7 @@ console.log("probando helpers");
       // if(piece){$square.text(piece)};
       //else{$square.text(" ")};
 
-      //SHOWING INN THE VIEW WHAT THE SITUATION OF THE PIECES IS IN THE GAME.
+      //SHOWING INN THE VIEW WHAT THE SITUATION OF THE PIECES IS AT THE BEGINING OF THE GAME.
       if (piece === 'R') {
        $square.addClass('bRook');
        }
@@ -86,6 +86,10 @@ console.log("probando helpers");
       if (piece === 'b'){
         $square.addClass('wBishop');
       }
+
+      // if (piece){
+      //   $square.addClass(piece);  TODO try to refactor this
+      // }
 
 
      // changing the move of the pieces and leaving and empty td when the piece is moving

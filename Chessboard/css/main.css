@@ -1,7 +1,8 @@
 body {
   width: 100%;
-  background-color: #e5e5ff;
-  font-family: Lato; }
+  background-color: #F5F5F5;
+  font-family: Lato;
+  color: #000080; }
 
 #container {
   width: 100%;
@@ -33,6 +34,16 @@ table {
   display: inline-block;
   float: right; }
 
+.first-last-row {
+  text-align: center;
+  font-size: 11px;
+  font-weight: bolder; }
+
+.first-last-col {
+  font-size: 1.5em;
+  font-weight: bolder;
+  padding-left: 3px; }
+
 td {
   width: 10.5%;
   height: 40px;
@@ -40,19 +51,19 @@ td {
   position: relative; }
 
 td.col-w {
-  background-color: #e5ccff; }
+  background-color: #B0E0E6; }
 
 td.col-b {
-  background-color: #9933ff; }
+  background-color: #00BFFF; }
 
 th {
   font-size: 2em; }
 
 .button-row {
-  margin-left: 15%;
+  margin-left: 29%;
   margin-bottom: 30px; }
   .button-row button {
-    background-color: #e5e5ff;
+    background-color: #00BFFF;
     border-radius: 5px; }
 
 .bRook::before {
@@ -72,7 +83,7 @@ th {
   content: '\265A'; }
 
 .bPawn::before {
-  content: '\265F'; }
+  content: "\265F"; }
 
 .wPawn::before {
   content: '\2659'; }

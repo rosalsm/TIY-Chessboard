@@ -1,7 +1,14 @@
+$lightblue: #B0E0E6;
+$darkblue: #00BFFF;
+$background: #F5F5F5;
+$text: #000080;
+
+
 body{
   width: 100%;
-  background-color: #e5e5ff;
+  background-color: $background;
   font-family: Lato;
+  color: $text;
 }
 
 #container{
@@ -45,10 +52,22 @@ table {
   //margin-right: 25%;
 }
 
+.first-last-row{
+  text-align: center;
+  font-size: 11px;
+  font-weight: bolder;
+}
+.first-last-col{
+  font-size: 1.5em;
+  font-weight: bolder;
+  padding-left: 3px;
+}
+
 td{
   width: 10.5%;
   height: 40px;
   font-size: 2em;
+  //font-weight: 400;
   //@extend .clearfix;
   position: relative;
 }
@@ -57,13 +76,13 @@ td{
 //}
 
 td.col-w {
-  background-color: #e5ccff;
+  background-color: $lightblue;
   //align-content: center;
 }
 
 
 td.col-b {
-  background-color: #9933ff;
+  background-color: $darkblue;
 }
 
 th{
@@ -71,10 +90,10 @@ th{
 }
 
 .button-row{
-  margin-left: 15%;
+  margin-left: 29%;
   margin-bottom: 30px;
   button{
-    background-color: #e5e5ff;
+    background-color: $darkblue;
     border-radius: 5px;
   }
   //align-items: center;

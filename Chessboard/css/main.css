@@ -28,23 +28,28 @@ h1 {
   margin-top: 2em;
   margin-right: 4%; }
 
+.button-row {
+  margin-left: 27%;
+  margin-bottom: 30px; }
+  .button-row button {
+    background-color: #00BFFF;
+    border-radius: 5px; }
+
 table {
   border: 2px;
   width: 90%;
   display: inline-block;
   float: right; }
 
-.first-last-row {
+.first-last-col, .first-last-row {
   text-align: center;
-  font-size: 11px;
+  font-size: 1em;
   font-weight: bolder; }
 
-.first-last-col {
-  font-size: 1.5em;
-  font-weight: bolder;
-  padding-left: 3px; }
+td, th {
+  padding-left: 7px; }
 
-td {
+tbody td {
   width: 10.5%;
   height: 40px;
   font-size: 2em;
@@ -55,16 +60,6 @@ td.col-w {
 
 td.col-b {
   background-color: #00BFFF; }
-
-th {
-  font-size: 2em; }
-
-.button-row {
-  margin-left: 29%;
-  margin-bottom: 30px; }
-  .button-row button {
-    background-color: #00BFFF;
-    border-radius: 5px; }
 
 .bRook::before {
   content: "\265C";
@@ -102,6 +97,41 @@ th {
 
 .wKing::before {
   content: '\2654'; }
+
+@media (max-width: 767px) {
+  h1 {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; }
+  .info, table {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 10px; }
+  .table-nav {
+    width: 100%; }
+  .button-row {
+    margin-left: 13%; }
+    .button-row button {
+      width: 5em; }
+  table {
+    float: left; } }
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .info, table {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 10px; }
+  .table-nav {
+    width: 80%; }
+  .button-row {
+    width: 90%;
+    margin-left: 0%; }
+    .button-row button {
+      width: 8em; }
+  table {
+    float: left; } }
 
 /*
  * Clearfix: contain floats

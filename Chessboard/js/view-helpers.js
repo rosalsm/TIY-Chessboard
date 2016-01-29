@@ -2,6 +2,30 @@
 ;(function(globals){ // That damn IIFE again!
 
 console.log("probando helpers");
+//David  1
+var update = globals.update = {
+  view:function(){
+    var $chessboard = $("tbody");
+
+    $('td').removeClass();
+
+    var gameboard = game.board();
+    $("tbody tr td").ep(highlightindex).addClass("highlight");
+
+    jQuery(gameboard).each(function(rank, row){
+      jQuery(row).each(function(file, piece){
+        // http://stackoverflow.com/questions/1442925/how-to-get-nth-jquery-element
+        var $square = $chessboard.find('tr').eq(rank).find('td').ep('file');
+        if (piece){
+          $square.addClass(piece);
+        };
+      });
+    });
+  }
+};
+
+
+// otro 2
 
 //var view = (globals.view = {
 //as we did with the model in main.js if we declare a var view and create another IIFE globals.view we can

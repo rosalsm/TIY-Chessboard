@@ -10,7 +10,7 @@ body {
 
 h1 {
   font-size: 2em;
-  margin-left: 20%;
+  text-align: center;
   font-family: Lato;
   font-weight: 300; }
 
@@ -23,13 +23,11 @@ h1 {
 .table-nav {
   width: 45%;
   float: right;
-  display: inline-block;
-  align-items: center;
-  margin-top: 2em;
-  margin-right: 4%; }
+  align-items: center; }
 
 .button-row {
-  margin-left: 27%;
+  display: flex;
+  justify-content: center;
   margin-bottom: 30px; }
   .button-row button {
     background-color: #00BFFF;
@@ -50,10 +48,9 @@ td, th {
   padding-left: 7px; }
 
 tbody td {
-  width: 10.5%;
-  height: 40px;
-  font-size: 2em;
-  position: relative; }
+  width: 11.5%;
+  height: 50px;
+  font-size: 2em; }
 
 td.col-w {
   background-color: #B0E0E6; }
@@ -110,28 +107,32 @@ td.col-b {
     margin-top: 10px; }
   .table-nav {
     width: 100%; }
-  .button-row {
-    margin-left: 13%; }
-    .button-row button {
-      width: 5em; }
+  .button-row button {
+    width: 5em; }
   table {
-    float: left; } }
+    float: left; }
+  tbody td {
+    height: 43px;
+    font-size: 25px; } }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-  .info, table {
+  .info {
     width: 96%;
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 10px; }
   .table-nav {
-    width: 80%; }
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
   .button-row {
     width: 90%;
     margin-left: 0%; }
     .button-row button {
-      width: 8em; }
-  table {
-    float: left; } }
+      width: 8em; } }
 
 /*
  * Clearfix: contain floats

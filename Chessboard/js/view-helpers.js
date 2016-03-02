@@ -77,6 +77,45 @@ var view = (globals.view = {
       if (piece === 'b'){
         $square.addClass('wBishop');
       }
+      
+
+      if (piece !== 'R') {
+       $square.removeClass('bRook');
+       }
+      if (piece !== 'N'){
+       $square.removeClass('bKnight');
+       }
+      if (piece !== 'B'){
+        $square.removeClass('bBishop');
+      }
+      if (piece !== 'Q'){
+        $square.removeClass('bQueen');
+      }
+      if (piece !== 'K'){
+        $square.removeClass('bKing');
+      }
+      if (piece !== 'P'){
+        $square.removeClass('bPawn');
+      }
+      if (piece !== 'p'){
+        $square.removeClass('wPawn');
+      }
+      if (piece !== 'r'){
+        $square.removeClass('wRook');
+      }
+      if (piece !== 'n'){
+        $square.removeClass('wKnight');
+      }
+      if (piece !== 'q'){
+        $square.removeClass('wQueen');
+      }
+      if (piece !== 'k'){
+        $square.removeClass('wKing');
+      }
+      if (piece !== 'b'){
+        $square.removeClass('wBishop');
+      }
+
 
       // if (piece){
       //   $square.addClass(piece);  TODO try to refactor this

@@ -40,6 +40,7 @@
 
     reset: function(){
       board = initial();
+      current=0;
       return this;  //this refers that reset belongs to function game so it returns game
     },
 
@@ -53,6 +54,7 @@
           current+=1;
         }
         //console.log(game.tracer());
+        console.log(current.move);
       return this;
     },
 
@@ -62,6 +64,7 @@
       for (current=0; current < moves.length; current++){
     game.applyMove(moves[current].from, moves[current].to);
     console.log(game.tracer());
+    console.log(current.move);
     }
       return this;
     },

@@ -77,7 +77,7 @@ var view = (globals.view = {
       if (piece === 'b'){
         $square.addClass('wBishop');
       }
-      
+
 
       if (piece !== 'R') {
        $square.removeClass('bRook');

@@ -63,11 +63,43 @@
     play: function(){
       for (current=0; current < moves.length; current++){
     game.applyMove(moves[current].from, moves[current].to);
+
+
     console.log(game.tracer());
     console.log(current.move);
     }
       return this;
     },
+
+
+//TRYING TO ADD DELAY
+    // play: function (){
+    //   var inter;
+    //
+    //   function playDelay (){
+    //     inter = setInterval (playd , 2000);
+    //   };
+    //
+    //
+    //    function playd (){
+    //
+    //     for (current=0; current < moves.length; current++){
+    //
+    //
+    //        game.applyMove(moves[current].from, moves[current].to);
+    //
+    //        console.log(game.tracer());
+    //        console.log(current.move);
+    //
+    //
+    //
+    //    };
+    //      return this;
+    //
+    //   },
+    // };
+
+
 
 
 

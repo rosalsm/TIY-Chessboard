@@ -19,7 +19,25 @@
    */
 console.log("probando controllers");
 
-jQuery('.play').on('click', function(event){
+// var interv;
+//
+// function playDelay(){
+//   interv = setInterval( playD , 2000);
+// };
+//
+// function playD(){
+//   game.play();
+//   view.helper();
+// }
+//
+// jQuery('.play').on('click', function (event){
+//   console.log("i am in controllers play");
+//    playDelay();
+//  });//end button play on (click)
+
+
+
+jQuery('.play').on('click', function (event){
   console.log("i am in controllers play");
    game.play();
    view.helper();

@@ -19,7 +19,25 @@
    */
 console.log("probando controllers");
 
-jQuery('.fa-play').on('click', function(event){
+// var interv;
+//
+// function playDelay(){
+//   interv = setInterval( playD , 2000);
+// };
+//
+// function playD(){
+//   game.play();
+//   view.helper();
+// }
+//
+// jQuery('.play').on('click', function (event){
+//   console.log("i am in controllers play");
+//    playDelay();
+//  });//end button play on (click)
+
+
+
+jQuery('.play').on('click', function (event){
   console.log("i am in controllers play");
    game.play();
    view.helper();
@@ -39,7 +57,7 @@ jQuery('.fa-play').on('click', function(event){
 
 
   // Controller for "next move"... This will be play
-  jQuery(".fa-step-forward").on('click', function(event){
+  jQuery(".next").on('click', function(event){
     console.log('i am in controllers forward');
     game.next();
     view.helper();
@@ -53,7 +71,7 @@ jQuery('.fa-play').on('click', function(event){
 
 
   // Controller for "previous move"...This will be step-backward
-  jQuery(".fa-step-backward").on('click', function(event){
+  jQuery(".prev").on('click', function(event){
     game.prev();
     view.helper();
     console.log("i am in controllers and prev")
@@ -71,7 +89,7 @@ jQuery('.fa-play').on('click', function(event){
   // }
 
   // Controller for "fast-forward"...
-  jQuery(".fa-fast-forward").on('click', function(event){
+  jQuery(".end").on('click', function(event){
     game.end();
     view.helper();
     console.log("i am in controllers and end")
@@ -83,7 +101,7 @@ jQuery('.fa-play').on('click', function(event){
 
 
   // Controller for anything else...
-   jQuery(".fa-backward").on('click', function(event){
+   jQuery(".reset").on('click', function(event){
      game.reset();
      view.helper();
      console.log(game.tracer());
@@ -92,5 +110,4 @@ jQuery('.fa-play').on('click', function(event){
     // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
     });
 
-// Am I supposed to recognize this?
 })(window || module && module.exports || this)

@@ -3,13 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Chessboard</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:200,300,400,500">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <!-- test will go after main.css  -->
@@ -19,7 +20,29 @@
 
     <body>
 
-      <section id="container">
+      <main id="container">
+        <h1>Chessboard showing the catalan opening</h1>
+
+        <article class="info">
+          <p>
+            The Catalan opening system is becoming one of the most popular setups for White in tournament play.
+            The Catalan derives its name from Catalonia, after tournament organisers at the 1929 Barcelona tournament asked Savielly Tartakower to create a new variation in homage to the area's chess history. It had been played a few times before Tartakower's usage in the tournament, however: Réti–Leonhardt, Berlin 1928, for instance, transposed into an Open Catalan.
+            The Catalan came to prominence at the top level when both Garry Kasparov and Viktor Korchnoi played it in their Candidates Semifinal match (part of the process to determine who would challenge world champion Anatoly Karpov for the title) in London in 1983: five games of the eleven-game match were Catalans.
+          </p>
+
+        </article>
+
+        <section class="table-nav">
+
+        <nav class="button-row">
+          <button class="reset"><i class="fa fa-undo"></i></button>
+          <button class="prev"><i class="fa fa-arrow-left"></i></button>
+          <!-- <button class="play"></button> -->
+          <button class="next"><i class="fa fa-arrow-right"></i></button>
+          <button class="end"><i class="fa fa-repeat"></i></button>
+
+        </nav>
+
 
       <table class="chessboard">
         <thead>
@@ -39,27 +62,27 @@
         <tbody>
         <tr class="rest-rows">
           <th class="first-last-col">8</th>
-          <td class="col-w">&#9820;</td>
-          <td class="col-b">&#9822;</td>
-          <td class="col-w">&#9821;</td>
-          <td class="col-b">&#9819;</td>
-          <td class="col-w">&#9818;</td>
-          <td class="col-b">&#9821;</td>
-          <td class="col-w">&#9822;</td>
-          <td class="col-b">&#9820;</td>
+          <td class="col-w bRook"></td>
+          <td class="col-b bKnight"></td>
+          <td class="col-w bBishop"></td>
+          <td class="col-b bQueen"></td>
+          <td class="col-w bKing"></td>
+          <td class="col-b bBishop"></td>
+          <td class="col-w bKnight"></td>
+          <td class="col-b bRook"></td>
           <th class="first-last-col">8</th>
         </tr>
 
         <tr class="rest-rows">
           <th class="first-last-col">7</th>
-          <td class="col-b">&#9823;</td>
-          <td class="col-w">&#9823;</td>
-          <td class="col-b">&#9823;</td>
-          <td class="col-w">&#9823;</td>
-          <td class="col-b">&#9823;</td>
-          <td class="col-w">&#9823;</td>
-          <td class="col-b">&#9823;</td>
-          <td class="col-w">&#9823;</td>
+          <td class="col-b bPawn"></td>
+          <td class="col-w bPawn"></td>
+          <td class="col-b bPawn"></td>
+          <td class="col-w bPawn"></td>
+          <td class="col-b bPawn"></td>
+          <td class="col-w bPawn"></td>
+          <td class="col-b bPawn"></td>
+          <td class="col-w bPawn"></td>
           <th class="first-last-col">7</th>
         </tr>
 
@@ -117,27 +140,27 @@
 
         <tr class="rest-rows">
           <th class="first-last-col">2</th>
-          <td class="col-w">&#9817;</td>
-          <td class="col-b">&#9817;</td>
-          <td class="col-w">&#9817;</td>
-          <td class="col-b">&#9817;</td>
-          <td class="col-w">&#9817;</td>
-          <td class="col-b">&#9817;</td>
-          <td class="col-w">&#9817;</td>
-          <td class="col-b">&#9817;</td>
+          <td class="col-w wPawn"></td>
+          <td class="col-b wPawn"></td>
+          <td class="col-w wPawn"></td>
+          <td class="col-b wPawn"></td>
+          <td class="col-w wPawn"></td>
+          <td class="col-b wPawn"></td>
+          <td class="col-w wPawn"></td>
+          <td class="col-b wPawn"></td>
           <th class="first-last-col">2</th>
         </tr>
 
         <tr class="rest-rows">
           <th class="first-last-col">1</th>
-          <td class="col-b">&#9814;</td>
-          <td class="col-w">&#9816;</td>
-          <td class="col-b">&#9815;</td>
-          <td class="col-w">&#9813;</td>
-          <td class="col-b">&#9812;</td>
-          <td class="col-w">&#9815;</td>
-          <td class="col-b">&#9816;</td>
-          <td class="col-w">&#9814;</td>
+          <td class="col-b wRook"></td>
+          <td class="col-w wKnight"></td>
+          <td class="col-b wBishop"></td>
+          <td class="col-w wQueen"></td>
+          <td class="col-b wKing"></td>
+          <td class="col-w wBishop"></td>
+          <td class="col-b wKnight"></td>
+          <td class="col-w wRook"></td>
           <th class="first-last-col">1</th>
         </tr>
       </tbody>
@@ -155,20 +178,16 @@
           <td></td>
         </tr>
       </tfoot>
-    </table>
-
-          <nav class="button-row">
-
-            <button><i class="fa fa-backward"></i></button>
-            <button><i class="fa fa-step-backward"></i></button>
-            <button><i class="fa fa-play"></i></button>
-            <button><i class="fa fa-step-forward"></i></button>
-            <button><i class="fa fa-fast-forward"></i></button>
-
-          </nav>
 
 
-    </section>
+
+
+
+
+      </table>
+      </section>
+
+    </main>
 
 
 

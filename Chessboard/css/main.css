@@ -1,0 +1,170 @@
+body {
+  width: 100%;
+  background-color: #F5F5F5;
+  font-family: Lato;
+  color: #000080; }
+
+#container {
+  width: 100%;
+  margin: 0 auto; }
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+  font-family: Lato;
+  font-weight: 400; }
+
+.info {
+  width: 40%;
+  display: inline-block;
+  margin-left: 8%;
+  margin-top: 7.5em; }
+
+.table-nav {
+  width: 45%;
+  float: right;
+  align-items: center; }
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px; }
+  .button-row button {
+    background-color: #F5F5F5;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: solid 3px #000080;
+    color: #000080;
+    outline: 0; }
+    .button-row button .fa {
+      font-size: 2.5em; }
+
+table {
+  border: 2px;
+  width: 90%;
+  display: inline-block;
+  float: right; }
+
+.first-last-col, .first-last-row {
+  text-align: center;
+  font-size: 1em;
+  font-weight: bolder; }
+
+td, th {
+  padding-left: 7px; }
+
+tbody td {
+  width: 11.5%;
+  height: 50px;
+  font-size: 2em; }
+
+td.col-w {
+  background-color: #B0E0E6; }
+
+td.col-b {
+  background-color: #00BFFF; }
+
+.bRook::before {
+  content: "\265C";
+  align-content: center; }
+
+.bKnight:before {
+  content: "\265E"; }
+
+.bBishop::before {
+  content: "\265D"; }
+
+.bQueen::before {
+  content: '\265B'; }
+
+.bKing::before {
+  content: '\265A'; }
+
+.bPawn::before {
+  content: "\265F"; }
+
+.wPawn::before {
+  content: '\2659'; }
+
+.wRook::before {
+  content: '\2656'; }
+
+.wKnight::before {
+  content: '\2658'; }
+
+.wBishop::before {
+  content: '\2657'; }
+
+.wQueen::before {
+  content: '\2655'; }
+
+.wKing::before {
+  content: '\2654'; }
+
+@media (max-width: 767px) {
+  h1 {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; }
+  .info, table {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 10px; }
+  .table-nav {
+    width: 100%; }
+  .button-row button {
+    width: 5em;
+    height: 5em; }
+  table {
+    float: left; }
+  tbody td {
+    height: 43px;
+    font-size: 25px; } }
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .info {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 10px; }
+  .table-nav {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
+  .button-row {
+    width: 100%;
+    margin-left: 0%; }
+    .button-row button {
+      width: 6em;
+      height: 6em; }
+  table {
+    width: 63%; } }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+#container:before,
+.info:before,
+.table-nav:before,
+.clearfix:after, #container:after, .info:after, .table-nav:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after, #container:after, .info:after, .table-nav:after {
+  clear: both; }

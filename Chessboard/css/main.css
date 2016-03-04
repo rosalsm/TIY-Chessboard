@@ -12,7 +12,7 @@ h1 {
   font-size: 2em;
   text-align: center;
   font-family: Lato;
-  font-weight: 300; }
+  font-weight: 400; }
 
 .info {
   width: 40%;
@@ -28,15 +28,17 @@ h1 {
 .button-row {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px; }
+  margin-bottom: 15px; }
   .button-row button {
     background-color: #F5F5F5;
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    border: solid 1px #000080;
+    width: 40px;
+    height: 40px;
+    border: solid 3px #000080;
     color: #000080;
     outline: 0; }
+    .button-row button .fa {
+      font-size: 2.5em; }
 
 table {
   border: 2px;

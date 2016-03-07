@@ -25,10 +25,7 @@
  var current= 0;
 //initialize the count of the moves in moves
 
-  /**
-   * Provide a _copy_ of the game board in order to update the View from it
-   * @return {Array} of {Array} of {String|null}
-   */
+
   var game = (globals.game = {
     board: function(){
       return board.map(function(row){
@@ -49,7 +46,6 @@
     next: function(){//code for the next moves
       console.log("i am in main.js");
        if (current < moves.length){
-          //game.applyMove(current);
           game.applyMove(moves[current].from,moves[current].to);
           current+=1;
         }
@@ -109,7 +105,6 @@
       if(current >= 0){
         current-=1;
         game.applyMove(moves[current].to,moves[current].from);
-        // game.applyMove(from,to);
       }
       console.log(game.tracer());
       return this;
@@ -124,12 +119,9 @@
     //console.log(game.tracer());
       return this;
     },
-    /**
-     * Provide a printable representation of the game board for use as a tracer
-     *
-     * @return {String} representation of `board`
-     * @todo Refactor to use Array methods?
-     */
+
+     //Provide a printable representation of the game board for use as a tracer
+
     tracer: function(){
       var bullet = '';
       for ( var rank = 0; rank < board.length; rank++){
@@ -141,16 +133,10 @@
       }
       return bullet;
     },
-    /**
-     * Apply a move to the game board, given a `from` and `to` position that both
-     * contain values for `rank` and `file`.
-     *
-     * @param {Object} from with `rank` and `file`
-     * @param {Object} to with `rank` and `file`
-     * @return undefined
-     *
-     * @todo Fill me in! ...and remove this comment.
-     */
+
+     //Apply a move to the game board, given a `from` and `to` position that both
+     //contain values for `rank` and `file`.
+
     applyMove: function(from, to){
       board[to.rank][to.file] = board[from.rank][from.file];
       board[from.rank][from.file] = null;
@@ -164,14 +150,11 @@
       //  board[moves[current].from.rank][moves[current].from.file] = null;
 
 
-      //console.log(game.tracer())
 
   }); // END game
-  /**
-   * Provide the initial state of the game board, useful for any game.
-   *
-   * @return {Array} of {Array} of {String|null}
-   */
+
+   //Provide the initial state of the game board, useful for any game.
+  
   function initial(){
     return [
       [ 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R' ],
